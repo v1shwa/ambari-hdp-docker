@@ -33,11 +33,11 @@ docker-compose up -d
 It will take about a minute until Ambari is available on port 8080
 
 ## Optional: Install HDP 2.6 using Ambari Blueprints
-Change the working directory to `blueprints`
+
 
 1. Register blueprint
 ```
-curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://<AMBARIHOST>:8080/api/v1/blueprints/<CLUSTERNAME> -d @blueprint.json
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://localhost:8080/api/v1/blueprints/jarvis -d @blueprints/blueprint.json
 ```
 
 2. Start deployment
@@ -45,7 +45,7 @@ curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://<AMBARIHOST>:8080
 Below comand will start cluster deployment
 
 ```
-curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://<AMBARHOST>:8080/api/v1/clusters/<CLUSTERNAME> -d @hosts.json
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://locahost:8080/api/v1/clusters/jarvis -d @blueprints/hosts.json
 ```
 
 ## Passwords
