@@ -45,7 +45,7 @@ curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://localhost:8080/ap
 Below comand will start cluster deployment
 
 ```
-curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://locahost:8080/api/v1/clusters/jarvis -d @blueprints/hosts.json
+curl -H "X-Requested-By: ambari" -X POST -u admin:admin http://localhost:8080/api/v1/clusters/jarvis -d @blueprints/hosts.json
 ```
 
 ## Passwords
